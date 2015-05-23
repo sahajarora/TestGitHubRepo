@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+         <link href="css/font-aws.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale-1"/>
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>
+        <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+      </script>  <script src="js/bootstrap.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+     <script>
+        $(document).ready(function () {
+            $('#identity').click(function () {
+                window.location = "Customize-check-ext.html";
+            });
+            $('#dashboard').click(function () {
+                window.location = "dashboard.html";
+            });
+            $('#notification').click(function () {
+                window.location = "notification.html";
+            });
+            $('#mycart').click(function () {
+                window.location = "shopping-cart.html";
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#camera').click(function () {
+                $("#myModal").modal('show');
+             
+            });
+            $('#myModal').on('show.bs.modal', function () {
+                $('#img').click(function () {
+                    $('#fileimg').trigger('click');
+                });
+                $('#fileimg').change(function(){
+                
+                });
+            });
+            $('#myModal').on('show.bs.modal', function () {
+                $('#snap').click(function () {
+                   
+                    document.getElementById("snap").addEventListener("click", function () {
+                        // Grab elements, create settings, etc.
+                        
+                        var canvas = document.getElementById("canvas"),
+                            context = canvas.getContext("2d"),
+                            video = document.getElementById("video"),
+                            videoObj = { "video": true },
+                            errBack = function (error) {
+                                console.log("Video capture error: ", error.code);
+                               
+                            };
+                        document.getElementById("snap").addEventListener("click", function () {
+                            context.drawImage(video, 0, 0, 640, 480);
+                        });
+                        // Put video listeners into place
+                        if (navigator.getUserMedia) { // Standard
+                            navigator.getUserMedia(videoObj, function (stream) {
+                                video.src = stream;
+                                video.play();
+                            }, errBack);
+                        } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+                            navigator.webkitGetUserMedia(videoObj, function (stream) {
+                                video.src = window.URL.createObjectURL(stream);
+                                video.play();
+                            }, errBack);
+                        }
+                        else if (navigator.mozGetUserMedia) { // Firefox-prefixed
+                            navigator.mozGetUserMedia(videoObj, function (stream) {
+                                video.src = window.URL.createObjectURL(stream);
+                                video.play();
+                            }, errBack);
+                        }
+
+                    }, false);
+
+                });
+            });
+        });
+       
+       
+</script>
+  
+</head>
+<body>
+  
+    <div class="row" style="margin-left:0px;margin-right:0px;">
+
+                  <div class="col-xs-2 div-topall" style="text-align:right">
+                     <button class="btn btn-menu-farbar" type="button" > <i class="fa fa-bars fa-2x"></i></button>
+
+                  </div>
+                  <div class="col-xs-8 div-topall">Form</div>
+                  <div class="col-xs-2 div-topall" ><a href="Login.html" style="color:white"><span class="glyphicon glyphicon-arrow-left"/></a></div>
+      </div>
+              
+      <div class="row" style="margin-left:0px;margin-right:0px;">
+          <div class="index1-left" >
+               <div class="col-xs-12" style="background-color:white;margin-top:10px;border-top-left-radius:20px;border-top-right-radius:20px;">
+                   <div style="margin:20px">                          
+                       <input type="text"class="form-control simple-input txt-style-form" placeholder="Name" id="form-name"/>
+                   </div>
+               </div>
+              <div class="col-xs-12" style="background-color:white;">
+                  <div class="col-xs-6">
+                      <div style="margin:5px"> 
+                           <input type="text"class="form-control simple-input txt-style-form" placeholder="Gender" id="form-gender"/></div>
+                    </div>
+                   <div class="col-xs-6">
+                       <div style="margin:5px"> 
+                      <input type="text"class="form-control simple-input txt-style-form" placeholder="Age" id="form-age"/></div>
+                   </div>
+              </div>
+               <div class="col-xs-12" style="background-color:white;">
+                   <div style="margin:20px">      
+                       <input type="text"class="simple-input form-control txt-style-form" placeholder="Email Adress" id="Text1"/>
+                  </div>
+                   <div style="margin:20px">      
+                       <input type="text"class="simple-input form-control txt-style-form" placeholder="Phone Number" id="Text2"/>
+                  </div>
+                   <div style="margin:20px">      
+                       <input type="text"class="simple-input form-control txt-style-form" placeholder="Adress1" id="Text3"/>
+                  </div>
+                   <div style="margin:20px">      
+                       <input type="text"class="simple-input form-control txt-style-form" placeholder="Adress1" id="Text4"/>
+                  </div>
+              </div>
+              <div class="col-xs-12 form-group" style="background-color:white;">
+                  <div style="margin:20px;">
+                  <div class="inner-addon right-addon" id="camera" >
+                      <span class="glyphicon glyphicon-camera" style="margin-right:40px;font-size:50px;padding-top:30px;"></span>
+                          <input type="text" class="form-control simple-input txt-style-form" placeholder="Search" />
+                     </div>
+              </div>
+             
+              <div class="col-xs-12" style="background-color:white;border-bottom-left-radius:20px;border-bottom-right-radius:20px;">
+                  <div style="margin-top:80px;margin-left:20px;margin-right:20px;">
+                      <button class="form-control" style="background-color:red;color:white;font-size:30px;min-height:70px;">Submit</button>
+                  </div>
+                   <div style="margin:05px;margin-top:20px;">      
+                       <button style="background-color:white;border-color:white;color:black;min-height:70px;font-size:30px;" class="form-control">Reset</button>
+                  </div>
+              </div>
+      </div>
+
+</div></div>
+
+              <div class="row fotter" style="margin-left:0px;margin-right:0px;">
+                       <div class="col-xs-4 nopadding">
+                           <button class="form-control btn-dashall" style="background-color:red;border-color:red;" id="dashboard">Dashboard</button>
+                       </div> 
+                       <div class="col-xs-4 nopadding">
+                            <button class="form-control btn-dashall" style="border-color:black" id="notification">Notification
+                                <!--<span class="badge badge-notify">04</span>--></button>
+
+                       </div> 
+                       <div class="col-xs-4 nopadding">
+                            <button class="form-control btn-dashall" style="border-left-color:white;border-left:solid 1px" id="mycart">My cart</button>
+
+                       </div>    
+              </div>
+    
+   <div id="myModal" class="modal fade ">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+           <div class="modal-body modal-body-height">
+                <div class="row full">
+                    <div class="col-xs-6" style="font-size:20px;border-right:solid 1px;height:100%;font-size:30px;"id="Gal-img">
+                        <p id="img">Gallery</p>
+                            <input type="file" accept="image/*" style="display:none" id="fileimg" capture="camera"/>
+                        
+                    </div>
+                    <div class="col-xs-6" style="font-size:20px;text-align:right;font-size:30px;" id="">
+                        <p id="snap">camera</p> 
+                        
+  
+                  
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+   
+</body>
+</html>

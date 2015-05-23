@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="viewport" content="width=device-width, initial-scale-1"/>
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+  <link href="css/font-aws.css" rel="stylesheet" />
+        <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>
+        <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+    <script>
+        $(document).ready(function () {
+            $('#identity').click(function () {
+                window.location = "Customize-check-ext.html";
+            });
+            $('#dashboard').click(function () {
+                window.location = "dashboard.html";
+            });
+            $('#notification').click(function () {
+                window.location = "notification.html";
+            });
+            $('#mycart').click(function () {
+                window.location = "shopping-cart.html";
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="row" style="margin-left:0px;margin-right:0px;">
+
+                  <div class="col-xs-2 div-topall" style="text-align:right">
+                      <button class="btn btn-menu-farbar" type="button" > <i class="fa fa-bars fa-2x"></i></button>
+                  </div>
+                  <div class="col-xs-8 div-topall">My cart</div>
+                  <div class="col-xs-2 div-topall"><span class="glyphicon glyphicon-arrow-left"/></div>
+      </div>
+              
+    <div class="row" style="margin-left:0px;margin-right:0px;">
+          <div class="col-xs-12 shopcart"> Reset all </div>
+     </div>
+    
+    <div class="row" style="margin-left:0px;margin-right:0px;">
+        <div class="col-xs-12 shopcart-item">
+            <div class="cart-margin">
+                        <div id="item">5 <span>item(s) found</span></div>
+                        <div class="shopcart-item-list">
+                          <div class="row">
+                                 <div class="col-xs-10">Domestic help Background score(1)</div> 
+                               <div class="col-xs-2"><span class="glyphicon glyphicon-remove-circle cart-ok"></span></div>
+                         </div>
+                        </div>
+                        <div class="shopcart-item-list-mid"  id="adress-check2">
+                          <div class="row">
+                                 <div class="col-xs-10">DomesticHelp 1</div>
+                                 <div class="col-xs-2"><span class="cart-ok glyphicon glyphicon-remove-circle " ></span></div>
+                           </div>
+                      </div>
+                       <div class="shopcart-item-list-mid1">
+                        <div class="row">
+                                 <div class="col-xs-10">Baby sitter Background score(1)</div>
+                           <div class="col-xs-2"><span class="cart-ok glyphicon glyphicon-remove-circle" style="float:right"></span></div>
+                        </div></div>
+                       <div class="shopcart-item-list-mid"   id="Div1">
+                         <div class="row">
+                                 <div class="col-xs-10">DomesticHelp 1</div>
+                                 <div class="col-xs-2"><span class="cart-ok glyphicon glyphicon-remove-circle " ></span></div>
+                           </div>
+                      </div>
+                       <div class="shopcart-item-list-mid" id="Div2">
+                         <div class="row">
+                                 <div class="col-xs-10">DomesticHelp 1</div>
+                                 <div class="col-xs-2"><span class="cart-ok glyphicon glyphicon-remove-circle " ></span></div>
+                           </div>
+                      </div>
+                       <div class="shopcart-item-list-last" id="Div3">
+                          DomesticHelp 1<span class="cart-ok glyphicon glyphicon-remove-circle " ></span>
+                           
+                           <div class="shop-cart-total">
+                              <div style="float:left;margin-left:3px;margin-top:20px;">SubTotal</div>
+                              <div  style="float:right;margin-right:3px;margin-top:20px;">12345</div>
+                           </div>
+                           <div class="shop-cart-total-tax">
+                               <div style="float:left;margin-left:3px;margin-top:20px;">Tax</div>
+                              <div  style="float:right;margin-right:3px;margin-top:20px;">2039.40 @12.36</div>
+                                                                              
+                           </div>
+                           <div  class="shop-cart-totalprice">
+                               <div style="float:left;margin-left:3px;margin-top:20px;">Total</div>
+                               <div style="float:right;margin-right:3px;margin-top:20px;font-size:25px;"><strong>12354.50INR</strong></div>
+                           </div>
+                           <br />
+                          </div>
+                           
+
+                      </div>
+                   </div>
+               
+               </div>
+       
+         <div class="row" style="margin-left:0px;margin-right:0px;">
+                    
+                   <div class="col-xs-12 shopcart-item">
+                   <div class="cart-margin">
+                        
+                            <button  id="cust-done " class=" cust-driver-done form-control">Done  Add to Bag</button></div><br />
+                  
+                   </div>
+                
+             </div>
+              
+                <div class="row fotter" style="margin-left:0px;margin-right:0px;">
+                       <div class="col-xs-4 nopadding">
+                           <button class="form-control btn-dashall" style="background-color:red;border-color:red;" id="dashboard">Dashboard</button>
+                       </div> 
+                       <div class="col-xs-4 nopadding">
+                            <button class="form-control btn-dashall" style="border-color:black" id="notification">Notification</button>
+
+                       </div> 
+                       <div class="col-xs-4 nopadding">
+                            <button class="form-control btn-dashall" style="border-left-color:white;border-left:solid 1px" id="mycart">
+                                My cart</button>
+
+                       </div>    
+              </div>
+</body>
+</html>
